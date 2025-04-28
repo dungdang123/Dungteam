@@ -1,3 +1,4 @@
+# Auto run faucet every day at 19h VN time
 name: Auto Faucet TRX (Shasta Testnet)
 
 on:
