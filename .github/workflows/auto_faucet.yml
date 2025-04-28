@@ -1,0 +1,26 @@
+name: Auto Faucet TRX (Shasta Testnet)
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Chạy vào lúc 12:00 UTC mỗi ngày (tương ứng 19:00 giờ VN)
+
+jobs:
+  run-faucet:
+    runs-on: ubuntu-latest  # Chạy trên môi trường Ubuntu (Linux)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Chọn phiên bản Python 3
+
+      - name: Install dependencies
+        run: |
+          pip install requests  # Cài đặt thư viện requests
+
+      - name: Run script
+        run: |
+          python auto_faucet.py  # Chạy script của bạn
