@@ -1,0 +1,1 @@
+# Auto run faucet every day at 19h VN time
