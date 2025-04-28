@@ -2,6 +2,8 @@
 name: Auto Faucet TRX (Shasta Testnet)
 
 on:
+  push:              # Khi có push thì chạy luôn
+  workflow_dispatch: # Cho phép bấm "Run workflow" thủ công
   schedule:
     - cron: '0 12 * * *'  # Chạy vào lúc 12:00 UTC mỗi ngày (tương ứng 19:00 giờ VN)
 
